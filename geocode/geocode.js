@@ -1,8 +1,7 @@
 const request = require('request');
 
-const googleApiKey = require('../secrets');
-
 const geocodeAddress = (addressArg, callback) => {
+  const {googleApiKey} = require('../secrets');
   const encodedAddress = encodeURIComponent(addressArg);
   
   request({
