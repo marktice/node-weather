@@ -30,4 +30,3 @@ geocode.geocodeAddress(argv.address, (errorMessage, geocodeResults) => {
     });
   }
 });
-

@@ -3,7 +3,7 @@ const request = require('request');
 const geocodeAddress = (addressArg, callback) => {
   const {googleApiKey} = require('../secrets');
   const encodedAddress = encodeURIComponent(addressArg);
-  
+
   request({
     url: `https://maps.googleapis.com/maps/api/geocode/json?address=${encodedAddress}&key=${googleApiKey}`,
     json: true,
@@ -17,11 +17,11 @@ const geocodeAddress = (addressArg, callback) => {
         address: body.results[0].formatted_address,
         latitude: body.results[0].geometry.location.lat,
         longitude: body.results[0].geometry.location.lng,
-      })
+      });
     }
-  }) 
+  });
 };
 
 module.exports = {
-  geocodeAddress
+  geocodeAddress,
 };

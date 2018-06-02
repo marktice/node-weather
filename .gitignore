@@ -1,3 +1,4 @@
 node_modules
 playground
 secrets.js
+.eslintrc.json
